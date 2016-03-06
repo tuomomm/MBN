@@ -7,7 +7,6 @@ N = 100;
 ps = 0.025:0.025:0.5;
 Mots = zeros(Nsamp,16,20,16);
 RandMots = zeros(Nsamp,16,20,16);
-load(['Mots_mean.mat'],'Motsm','RandMotsm','Motsd','RandMotsd','Motsmp','Motsdp','RandMotsmp','RandMotsdp');
 tic;
 
 for ITER = 1:Nsamp
