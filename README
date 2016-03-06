@@ -1,0 +1,26 @@
+MATLAB files to produce MBNs, calculate their motif distributions and plot the results.
+Tuomo Mäki-Marttunen, 2016
+
+Files included:
+
+mbn.m
+-The script for creating an MBN of given size, in-degree distribution and motif preference
+
+givemotifs.m
+-The script for calculating the three-node motif distribution
+
+calcmotres.m
+-The script for creating MBNs of each type. Saves the results to Mots_mean.mat. Takes a
+ while, depending on the number of samples (by default Nsamp=20, in the article Nsamp=200 used).
+ In a standard laptop using single CPU thread, calculation with Nsamp=20 took 2 hours to finish.
+
+drawmotres.m
+-The script for plotting the results.
+
+
+
+To calculate and plot the results corresponding to Figure S1, run the following commands in the directory including all files:
+
+calcmotres;
+drawmotres;
+
