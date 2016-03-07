@@ -407,3 +407,18 @@ h2=plot(kron(x(:),ones(9,1))+repmat([0;0;-mbw;mbw;0;0;-mbw;mbw;nan],n,1),kron(y(
 
 
 end
+
+function C=colorsredtolila(N)
+
+linchange = 0:1/(N-1):1;
+linchange_x = [0 0.36 0.45 0.65 0.7 0.8]/0.8;
+linchange_y = [0 0.29 0.46 0.65 0.75 0.83];
+for i=1:length(linchange)
+    ind = find(linchange(i)>=linchange_x,1,'last');
+    if ind < length(linchange_x)
+        linchange(i) = linchange_y(ind)+(linchange_y(ind+1)-linchange_y(ind))*(linchange(i)-linchange_x(ind))/(linchange_x(ind+1)-linchange_x(ind));
+    end
+end
+
+C = hsv2rgb([linchange',ones(N,2)]);
+end
