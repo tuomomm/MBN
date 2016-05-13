@@ -1,5 +1,5 @@
 MATLAB files to produce MBNs, calculate their motif distributions and plot the results.
-Tuomo Mäki-Marttunen, 2016
+Tuomo M&auml;ki-Marttunen, 2016
 
 Files included:
 
@@ -19,7 +19,7 @@ drawmotres.m
 
 
 
-To calculate and plot the results corresponding to Figure S1, run the following commands in the directory including all files:
+To calculate and plot the results corresponding to Figure S2, run the following commands in the directory including all files:
 
 calcmotres;
 drawmotres;
